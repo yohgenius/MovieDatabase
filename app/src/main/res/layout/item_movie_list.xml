@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimens_150"
+    android:layout_marginBottom="@dimen/dimens_8"
+    android:background="@drawable/bg_cardview">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/dimens_85"
+        android:layout_height="@dimen/dimens_85"
+        android:layout_marginStart="@dimen/dimens_16"
+        android:layout_marginTop="@dimen/dimens_16"
+        android:layout_marginBottom="@dimen/dimens_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginBottom="@dimen/dimens_16"
+        app:riv_corner_radius="@dimen/dimens_12"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="@dimen/dimens_250"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimens_16"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@id/iv_avatar"
+        tools:text="@string/title" />
+
+    <TextView
+        android:id="@+id/tv_movie_genre"
+        android:layout_width="@dimen/dimens_0"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimens_16"
+        android:maxLines="2"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+        tools:text="@string/genre" />
+</androidx.constraintlayout.widget.ConstraintLayout>

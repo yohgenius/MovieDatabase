@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Movie Database</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="btn_retry">Retry</string>
+    <string name="tv_result_error">Result could not be loaded</string>
+    <string name="title">Title</string>
+    <string name="genre">Genre</string>
+
+
+    <string name="user_type">User Type</string>
+    <string name="email">Email</string>
+    <string name="company">Company</string>
+    <string name="username">Username</string>
+    <string name="dummy_followings">100</string>
+    <string name="following">Following</string>
+    <string name="dummy_followers">80</string>
+    <string name="followers">Follower</string>
+    <string name="delete_user_favorite">Removed from favorite</string>
+    <string name="add_user_favorite">Added to favorite</string>
+    <string name="back_button">Back Button</string>
+    <string name="favorite_button">Favorite Button</string>
+    <string name="read_reviews"><u>Read Reviews</u></string>
+    <string name="watch_trailer"><u>Watch Trailer</u></string>
 </resources>
