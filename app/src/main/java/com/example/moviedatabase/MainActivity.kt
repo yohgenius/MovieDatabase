@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            bottomNavView?.isVisible = destination.id != R.id.splashFragment
+//            bottomNavView?.isVisible = destination.id != R.id.splashFragment
+            bottomNavView?.isVisible = false
 
             if (destination.id == R.id.splashFragment) {
                 window.statusBarColor = Color.TRANSPARENT

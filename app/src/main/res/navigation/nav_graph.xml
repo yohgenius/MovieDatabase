@@ -12,7 +12,12 @@
         <action
             android:id="@+id/action_splashFragment_to_homeFragment2"
             app:destination="@id/homeFragment2"
-            app:popUpTo="@id/splashFragment" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment2"
@@ -20,7 +25,11 @@
         android:label="HomeFragment">
         <action
             android:id="@+id/action_homeFragment2_to_discoverFragment"
-            app:destination="@id/discoverFragment" />
+            app:destination="@id/discoverFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/discoverFragment"
@@ -31,11 +40,31 @@
             app:argType="string" />
         <action
             android:id="@+id/action_discoverFragment_to_detailMovieFragment"
-            app:destination="@id/detailMovieFragment" />
+            app:destination="@id/detailMovieFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/detailMovieFragment"
         android:name="com.example.moviedatabase.ui.detail.DetailMovieFragment"
-        android:label="DetailMovieFragment" />
+        android:label="DetailMovieFragment">
+        <action
+            android:id="@+id/action_detailMovieFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.example.moviedatabase.ui.review.ReviewFragment"
+        android:label="ReviewFragment">
+        <argument
+            android:name="genreId"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

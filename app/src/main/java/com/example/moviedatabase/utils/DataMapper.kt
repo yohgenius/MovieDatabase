@@ -3,12 +3,14 @@ package com.example.moviedatabase.utils
 import com.example.moviedatabase.data.local.entity.DetailMovieEntity
 import com.example.moviedatabase.data.remote.response.DetailMovieResponse
 import com.example.moviedatabase.data.remote.response.MovieResult
+import com.example.moviedatabase.data.remote.response.ReviewResult
 import com.example.moviedatabase.domain.model.MovieModel
+import com.example.moviedatabase.domain.model.ReviewModel
 
 object DataMapper {
-    fun mapMovieResponseToModel(data : List<MovieResult>): List<MovieModel> {
+    fun mapMovieResponseToModel(data: List<MovieResult>): List<MovieModel> {
         return data.map {
-            with(it){
+            with(it) {
                 MovieModel(
                     id,
                     title,
@@ -31,7 +33,15 @@ object DataMapper {
         )
         movies.add(movie)
         return movies
+    }
 
-
+    fun mapReviewResponseToModel(data: List<ReviewResult>): List<ReviewModel> {
+        return data.map {
+            with(it) {
+                ReviewModel(
+                    author, content, created_at
+                )
+            }
+        }
     }
 }

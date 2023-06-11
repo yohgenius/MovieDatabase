@@ -1,4 +1,4 @@
-package com.example.moviedatabase.ui.discover
+package com.example.moviedatabase.ui.review
 
 import androidx.lifecycle.*
 import androidx.paging.cachedIn
@@ -7,15 +7,15 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class DiscoverViewModel @Inject constructor(
+class ReviewViewModel @Inject constructor(
     private val useCase: UseCase,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     val genreId: String = savedStateHandle["genreId"]!!
     private val currentQuery = MutableLiveData(genreId)
 
-    val movie = currentQuery.switchMap { currentQuery ->
-        useCase.getMovieList(currentQuery).cachedIn(viewModelScope)
+    val review = currentQuery.switchMap { currentQuery ->
+        useCase.getReviewList(currentQuery).cachedIn(viewModelScope)
     }
 
     fun searchUsers(query: String) {

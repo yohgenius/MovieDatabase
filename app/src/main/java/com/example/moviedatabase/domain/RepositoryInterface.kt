@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.paging.PagingData
 import com.example.moviedatabase.data.local.entity.DetailMovieEntity
 import com.example.moviedatabase.domain.model.MovieModel
+import com.example.moviedatabase.domain.model.ReviewModel
 import com.example.moviedatabase.utils.Resource
 
 interface RepositoryInterface {
@@ -11,5 +12,6 @@ interface RepositoryInterface {
     fun getDetailMovie(id: String) : LiveData<Resource<DetailMovieEntity>>
     fun setFavoriteMovie(data: DetailMovieEntity, state: Boolean)
     fun getFavoriteMovie(): LiveData<List<DetailMovieEntity>>
+    fun getReviewList(query: String): LiveData<PagingData<ReviewModel>>
 
 }

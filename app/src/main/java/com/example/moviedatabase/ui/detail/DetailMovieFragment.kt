@@ -10,6 +10,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.moviedatabase.BuildConfig
@@ -101,6 +103,7 @@ class DetailMovieFragment : Fragment() {
     }
 
     private fun showDetailMovie(id: String) {
+        var navController: NavController? = null
         viewModel.setDetailId(id)
         viewModel.getDetail.observe(viewLifecycleOwner) { detail ->
             if (detail != null) {
@@ -117,7 +120,13 @@ class DetailMovieFragment : Fragment() {
 //                                val genreNames = mutableListOf<String>()
 //                                tvMovieGenre.text = genreNames.joinToString(separator = ", ")
                                 tvOverview.text = detail.data.overview
-                                tvReview.setOnClickListener { }
+                                tvReview.setOnClickListener {
+                                    val bundle = Bundle()
+                                    bundle.putString("genreId", detail.data.id.toString())
+                                    navController = Navigation.findNavController(it)
+                                    navController!!.navigate(R.id.action_detailMovieFragment_to_reviewFragment, bundle)
+
+                                }
                                 tvTrailer.setOnClickListener { getTrailer(detail.data.id) }
                             }
                         }

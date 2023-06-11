@@ -28,4 +28,8 @@ interface ApiService {
     suspend fun getMovieTrailer(
         @Path("id") id: String,
     ): Response<VideoResponse>
+    @GET("movie/{id}/reviews?api_key=${BuildConfig.API_KEY}")
+    suspend fun getReviewList(
+        @Path("id") id: String,
+    ): ReviewResponse
 }

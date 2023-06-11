@@ -12,6 +12,7 @@
         android:layout_marginStart="@dimen/dimens_16"
         android:layout_marginTop="@dimen/dimens_16"
         android:layout_marginEnd="@dimen/dimens_16"
+        android:visibility="gone"
         android:background="@drawable/bg_search"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"

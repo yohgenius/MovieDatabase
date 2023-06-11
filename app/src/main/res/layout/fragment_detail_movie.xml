@@ -143,6 +143,7 @@
         android:clickable="true"
         android:contentDescription="@string/favorite_button"
         android:focusable="true"
+        android:visibility="gone"
         app:srcCompat="@drawable/ic_favorite_off" />
 
 

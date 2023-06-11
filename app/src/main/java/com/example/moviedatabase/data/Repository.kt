@@ -8,11 +8,13 @@ import androidx.paging.liveData
 import com.example.moviedatabase.data.local.LocalDataSource
 import com.example.moviedatabase.data.local.entity.DetailMovieEntity
 import com.example.moviedatabase.data.remote.RemoteDataSource
+import com.example.moviedatabase.data.remote.ReviewDataSource
 import com.example.moviedatabase.data.remote.network.ApiResponse
 import com.example.moviedatabase.data.remote.network.ApiService
 import com.example.moviedatabase.data.remote.response.DetailMovieResponse
 import com.example.moviedatabase.domain.RepositoryInterface
 import com.example.moviedatabase.domain.model.MovieModel
+import com.example.moviedatabase.domain.model.ReviewModel
 import com.example.moviedatabase.utils.AppExecutors
 import com.example.moviedatabase.utils.DataMapper
 import javax.inject.Inject
@@ -21,6 +23,7 @@ class Repository @Inject constructor(
     private val localDataSource: LocalDataSource,
     private val apiService: ApiService,
     private val remoteDataSource: RemoteDataSource,
+    private val reviewDataSource: ReviewDataSource,
     private val appExecutors: AppExecutors
 ) : RepositoryInterface {
     override fun getMovieList(query: String): LiveData<PagingData<MovieModel>> {
@@ -63,6 +66,15 @@ class Repository @Inject constructor(
 
     override fun getFavoriteMovie(): LiveData<List<DetailMovieEntity>> {
         return localDataSource.getFavoriteMovie()
+    }
+    override fun getReviewList(query: String): LiveData<PagingData<ReviewModel>> {
+        return Pager(
+            config = PagingConfig(
+                pageSize = 20,
+                maxSize = 100,
+                enablePlaceholders = false
+            ), pagingSourceFactory = { ReviewDataSource(apiService, query) }
+        ).liveData
     }
 
 }
