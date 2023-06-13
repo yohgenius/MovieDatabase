@@ -6,8 +6,8 @@ import com.example.moviedatabase.data.local.room.MovieDao
 import javax.inject.Inject
 
 class LocalDataSource @Inject constructor(private val movieDao: MovieDao) {
-    fun insertDetailMovie(detailUser: List<DetailMovieEntity>) =
-        movieDao.insertUserDetail(detailUser)
+    fun insertDetailMovie(detailMovie: List<DetailMovieEntity>) =
+        movieDao.insertMovieDetail(detailMovie)
 
     fun getDetailMovie(id: String) = movieDao.getDetailMovie(id)
 
@@ -19,8 +19,4 @@ class LocalDataSource @Inject constructor(private val movieDao: MovieDao) {
     fun getFavoriteMovie(): LiveData<List<DetailMovieEntity>> {
         return movieDao.getFavoriteMovie()
     }
-
-//    fun searchFavoriteMovie(query: String): LiveData<List<DetailMovieEntity>> {
-//        return movieDao.searchMovie(query)
-//    }
 }

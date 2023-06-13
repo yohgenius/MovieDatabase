@@ -1,4 +1,4 @@
-package com.example.moviedatabase.utils
+package com.example.moviedatabase.external.utils
 
 data class Resource<T>(val status: Status, val data: T?, val message: String?) {
     companion object {

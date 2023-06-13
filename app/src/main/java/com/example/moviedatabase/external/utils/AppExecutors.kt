@@ -1,4 +1,4 @@
-package com.example.moviedatabase.utils
+package com.example.moviedatabase.external.utils
 
 import android.os.Handler
 import android.os.Looper
@@ -23,7 +23,6 @@ class AppExecutors @VisibleForTesting constructor(
     )
 
     fun diskIO(): Executor = diskIO
-    fun networkIO(): Executor = networkIO
     fun mainThread(): Executor = mainThread
 
     private class MainThreadExecutor : Executor {

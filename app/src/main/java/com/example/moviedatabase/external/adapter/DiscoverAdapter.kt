@@ -1,4 +1,4 @@
-package com.example.moviedatabase.ui.adapter
+package com.example.moviedatabase.external.adapter
 
 import android.text.TextUtils
 import android.view.LayoutInflater
@@ -11,9 +11,9 @@ import com.example.moviedatabase.BuildConfig
 import com.example.moviedatabase.R
 import com.example.moviedatabase.databinding.ItemMovieListBinding
 import com.example.moviedatabase.domain.model.MovieModel
-import com.example.moviedatabase.utils.GenreConverter
+import com.example.moviedatabase.external.utils.GenreConverter
 
-class DiscoverAdapter : PagingDataAdapter<MovieModel, DiscoverAdapter.ViewHolder>(USER_DIFF) {
+class DiscoverAdapter : PagingDataAdapter<MovieModel, DiscoverAdapter.ViewHolder>(MOVIE_DIFF) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemMovieListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -21,9 +21,9 @@ class DiscoverAdapter : PagingDataAdapter<MovieModel, DiscoverAdapter.ViewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val user = getItem(position)
-        if (user != null) {
-            holder.bind(user)
+        val movie = getItem(position)
+        if (movie != null) {
+            holder.bind(movie)
         }
     }
 
@@ -57,7 +57,7 @@ class DiscoverAdapter : PagingDataAdapter<MovieModel, DiscoverAdapter.ViewHolder
 
 
     companion object {
-        private val USER_DIFF = object : DiffUtil.ItemCallback<MovieModel>() {
+        private val MOVIE_DIFF = object : DiffUtil.ItemCallback<MovieModel>() {
             override fun areItemsTheSame(oldItem: MovieModel, newItem: MovieModel): Boolean {
                 return oldItem.id == newItem.id
             }

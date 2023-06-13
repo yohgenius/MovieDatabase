@@ -6,7 +6,7 @@ import com.example.moviedatabase.data.local.entity.DetailMovieEntity
 import com.example.moviedatabase.domain.RepositoryInterface
 import com.example.moviedatabase.domain.model.MovieModel
 import com.example.moviedatabase.domain.model.ReviewModel
-import com.example.moviedatabase.utils.Resource
+import com.example.moviedatabase.external.utils.Resource
 import javax.inject.Inject
 
 class Interactor @Inject constructor(private val repository: RepositoryInterface) : UseCase {

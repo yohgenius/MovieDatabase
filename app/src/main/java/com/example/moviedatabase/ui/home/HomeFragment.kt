@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviedatabase.data.remote.response.GenreResult
 import com.example.moviedatabase.databinding.FragmentHomeBinding
-import com.example.moviedatabase.ui.adapter.HomeAdapter
-import com.example.moviedatabase.utils.Status
+import com.example.moviedatabase.external.adapter.HomeAdapter
+import com.example.moviedatabase.external.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -51,7 +51,7 @@ class HomeFragment : Fragment() {
                         binding.rvGenre.visibility = View.VISIBLE
                         binding.progressCircular.visibility = View.GONE
                         resource.data?.let { movies ->
-                            homeAdapter.addUsers(movies.body()!!.genres)
+                            homeAdapter.addGenres(movies.body()!!.genres)
                         }
                     }
                     Status.ERROR -> {
@@ -64,7 +64,9 @@ class HomeFragment : Fragment() {
                         binding.progressCircular.visibility = View.VISIBLE
                         binding.rvGenre.visibility = View.GONE
                     }
-                    Status.EMPTY -> TODO()
+                    Status.EMPTY -> {
+                        binding.tvEmpty.visibility = View.VISIBLE
+                    }
                 }
             }
         }

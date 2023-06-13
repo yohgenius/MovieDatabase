@@ -17,8 +17,4 @@ class ReviewViewModel @Inject constructor(
     val review = currentQuery.switchMap { currentQuery ->
         useCase.getReviewList(currentQuery).cachedIn(viewModelScope)
     }
-
-    fun searchUsers(query: String) {
-        currentQuery.value = query
-    }
 }

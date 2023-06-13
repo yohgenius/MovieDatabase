@@ -6,26 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/black">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchview"
-        android:visibility="gone"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimens_16"
-        android:layout_marginTop="@dimen/dimens_8"
-        android:layout_marginEnd="@dimen/dimens_16"
-        android:layout_marginBottom="@dimen/dimens_16"
-        android:background="@drawable/bg_search"
-        app:iconifiedByDefault="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:queryBackground="@android:color/transparent"
-        app:queryHint="Search Movie"
-        app:searchIcon="@drawable/ic_search" />
-
-
     <TextView
         android:id="@+id/tv_empty_state"
         android:layout_width="wrap_content"
@@ -63,14 +43,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_empty_state_desc" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_user"
+        android:id="@+id/rv_movies"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimens_0"
         android:layout_marginTop="@dimen/dimens_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchview"
+        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_movie_list"
         tools:visibility="visible" />
 

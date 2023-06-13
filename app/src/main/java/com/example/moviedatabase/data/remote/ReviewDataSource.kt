@@ -3,7 +3,7 @@ package com.example.moviedatabase.data.remote
 import androidx.paging.PagingSource
 import com.example.moviedatabase.data.remote.network.ApiService
 import com.example.moviedatabase.domain.model.ReviewModel
-import com.example.moviedatabase.utils.DataMapper
+import com.example.moviedatabase.external.utils.DataMapper
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject

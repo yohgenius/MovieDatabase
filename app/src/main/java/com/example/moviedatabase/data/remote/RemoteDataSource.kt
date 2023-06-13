@@ -8,7 +8,7 @@ import com.example.moviedatabase.data.remote.network.ApiResponse
 import com.example.moviedatabase.data.remote.network.ApiService
 import com.example.moviedatabase.data.remote.response.DetailMovieResponse
 import com.example.moviedatabase.domain.model.MovieModel
-import com.example.moviedatabase.utils.DataMapper
+import com.example.moviedatabase.external.utils.DataMapper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.HttpException
@@ -44,14 +44,14 @@ class RemoteDataSource @Inject constructor(
     }
 
     fun getDetailMovie(id: String): LiveData<ApiResponse<DetailMovieResponse>> {
-        val user = MutableLiveData<ApiResponse<DetailMovieResponse>>()
+        val movie = MutableLiveData<ApiResponse<DetailMovieResponse>>()
         apiService.getDetailMovie(id).enqueue(object : Callback<DetailMovieResponse> {
             override fun onResponse(
                 call: Call<DetailMovieResponse>,
                 response: Response<DetailMovieResponse>
             ) {
                 if (response.isSuccessful && response.body() != null) {
-                    user.value = ApiResponse.success(response.body()!!)
+                    movie.value = ApiResponse.success(response.body()!!)
                 }
             }
 
@@ -59,6 +59,6 @@ class RemoteDataSource @Inject constructor(
                 Log.d("Failure", t.message.toString())
             }
         })
-        return user
+        return movie
     }
 }

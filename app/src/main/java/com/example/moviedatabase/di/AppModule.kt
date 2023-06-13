@@ -1,4 +1,4 @@
-package com.example.moviedatabase.domain.di
+package com.example.moviedatabase.di
 
 import android.content.Context
 import androidx.room.Room
@@ -10,7 +10,7 @@ import com.example.moviedatabase.data.remote.network.ApiService
 import com.example.moviedatabase.domain.RepositoryInterface
 import com.example.moviedatabase.domain.usecase.Interactor
 import com.example.moviedatabase.domain.usecase.UseCase
-import com.example.moviedatabase.utils.AppExecutors
+import com.example.moviedatabase.external.utils.AppExecutors
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

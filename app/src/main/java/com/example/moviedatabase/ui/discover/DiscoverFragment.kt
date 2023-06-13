@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviedatabase.R
 import com.example.moviedatabase.databinding.FragmentDiscoverBinding
 import com.example.moviedatabase.domain.model.MovieModel
-import com.example.moviedatabase.ui.adapter.DiscoverAdapter
-import com.example.moviedatabase.ui.adapter.UserLoadStateAdapter
+import com.example.moviedatabase.external.adapter.DiscoverAdapter
+import com.example.moviedatabase.external.adapter.UserLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -41,11 +41,12 @@ class DiscoverFragment : Fragment() {
             discoverAdapter.submitData(viewLifecycleOwner.lifecycle, it)
             binding.progressCircular.visibility = View.GONE
             showRvList()
+
         }
     }
 
     private fun showRvList() {
-        with(binding.rvUser) {
+        with(binding.rvMovies) {
             this.layoutManager = LinearLayoutManager(context)
             this.setHasFixedSize(true)
             this.adapter = discoverAdapter.withLoadStateHeaderAndFooter(

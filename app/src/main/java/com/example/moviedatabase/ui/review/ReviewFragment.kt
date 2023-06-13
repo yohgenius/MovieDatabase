@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviedatabase.databinding.FragmentDiscoverBinding
-import com.example.moviedatabase.ui.adapter.ReviewAdapter
-import com.example.moviedatabase.ui.adapter.UserLoadStateAdapter
+import com.example.moviedatabase.external.adapter.ReviewAdapter
+import com.example.moviedatabase.external.adapter.UserLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -42,7 +42,7 @@ class ReviewFragment : Fragment() {
     }
 
     private fun showRvList() {
-        with(binding.rvUser) {
+        with(binding.rvMovies) {
             this.layoutManager = LinearLayoutManager(context)
             this.setHasFixedSize(true)
             this.adapter = reviewAdapter.withLoadStateHeaderAndFooter(

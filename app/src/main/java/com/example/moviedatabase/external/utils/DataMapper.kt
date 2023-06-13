@@ -1,4 +1,4 @@
-package com.example.moviedatabase.utils
+package com.example.moviedatabase.external.utils
 
 import com.example.moviedatabase.data.local.entity.DetailMovieEntity
 import com.example.moviedatabase.data.remote.response.DetailMovieResponse

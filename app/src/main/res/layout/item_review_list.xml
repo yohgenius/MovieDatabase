@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="@dimen/dimens_250"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16"
+        android:layout_marginEnd="@dimen/dimens_16"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title" />
+
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="@dimen/dimens_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16"
+        android:layout_marginEnd="@dimen/dimens_16"
+        android:layout_marginTop="@dimen/dimens_8"
+        android:maxLines="2"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+        tools:text="@string/comment" />
+
+    <TextView
+        android:id="@+id/tv_created"
+        android:layout_width="@dimen/dimens_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16"
+        android:layout_marginEnd="@dimen/dimens_16"
+        android:maxLines="2"
+        android:layout_marginTop="@dimen/dimens_8"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_comment"
+        tools:text="@string/created_at" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_1"
+        android:layout_marginTop="@dimen/dimens_8"
+        android:background="@color/text_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_created" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,9 +3,9 @@ package com.example.moviedatabase.data
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.example.moviedatabase.data.remote.network.ApiResponse
-import com.example.moviedatabase.utils.AppExecutors
-import com.example.moviedatabase.utils.Resource
-import com.example.moviedatabase.utils.Status
+import com.example.moviedatabase.external.utils.AppExecutors
+import com.example.moviedatabase.external.utils.Resource
+import com.example.moviedatabase.external.utils.Status
 
 abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecutors: AppExecutors) {
 

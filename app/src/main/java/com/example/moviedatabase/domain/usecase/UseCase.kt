@@ -5,7 +5,7 @@ import androidx.paging.PagingData
 import com.example.moviedatabase.data.local.entity.DetailMovieEntity
 import com.example.moviedatabase.domain.model.MovieModel
 import com.example.moviedatabase.domain.model.ReviewModel
-import com.example.moviedatabase.utils.Resource
+import com.example.moviedatabase.external.utils.Resource
 
 interface UseCase {
     fun getDetailMovie(id: String): LiveData<Resource<DetailMovieEntity>>

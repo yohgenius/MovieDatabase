@@ -4,7 +4,7 @@ import androidx.lifecycle.*
 import com.example.moviedatabase.data.Repository
 import com.example.moviedatabase.data.local.entity.DetailMovieEntity
 import com.example.moviedatabase.domain.usecase.UseCase
-import com.example.moviedatabase.utils.Resource
+import com.example.moviedatabase.external.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject

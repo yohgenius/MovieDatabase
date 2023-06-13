@@ -17,8 +17,4 @@ class DiscoverViewModel @Inject constructor(
     val movie = currentQuery.switchMap { currentQuery ->
         useCase.getMovieList(currentQuery).cachedIn(viewModelScope)
     }
-
-    fun searchUsers(query: String) {
-        currentQuery.value = query
-    }
 }

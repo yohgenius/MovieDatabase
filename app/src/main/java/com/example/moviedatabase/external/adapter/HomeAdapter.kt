@@ -1,4 +1,4 @@
-package com.example.moviedatabase.ui.adapter
+package com.example.moviedatabase.external.adapter
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -149,16 +149,6 @@ class HomeAdapter(private val genres: ArrayList<GenreResult>) :
         }
     }
 
-//    lateinit var onItemClickCallback: OnItemClickCallback
-//    fun setOnItemCallback(callback: OnItemClickCallback) {
-//        this.onItemClickCallback = callback
-//
-//    }
-//
-//    interface OnItemClickCallback{
-//        fun onItemClicked(id: genre)
-//    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
 
         val binding =
@@ -173,7 +163,7 @@ class HomeAdapter(private val genres: ArrayList<GenreResult>) :
 
     }
 
-    fun addUsers(genres: List<GenreResult>) {
+    fun addGenres(genres: List<GenreResult>) {
         this.genres.apply {
             addAll(genres)
         }

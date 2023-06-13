@@ -3,6 +3,7 @@ package com.example.moviedatabase.ui.detail
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +18,7 @@ import com.bumptech.glide.Glide
 import com.example.moviedatabase.BuildConfig
 import com.example.moviedatabase.R
 import com.example.moviedatabase.databinding.FragmentDetailMovieBinding
-import com.example.moviedatabase.utils.Status
+import com.example.moviedatabase.external.utils.Status
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -89,13 +90,13 @@ class DetailMovieFragment : Fragment() {
             if (state) {
                 Snackbar.make(
                     requireView(),
-                    getString(R.string.delete_user_favorite),
+                    getString(R.string.delete_movie_favorite),
                     Snackbar.LENGTH_SHORT
                 ).show()
             } else {
                 Snackbar.make(
                     requireView(),
-                    getString(R.string.add_user_favorite),
+                    getString(R.string.add_movie_favorite),
                     Snackbar.LENGTH_SHORT
                 ).show()
             }
@@ -124,7 +125,10 @@ class DetailMovieFragment : Fragment() {
                                     val bundle = Bundle()
                                     bundle.putString("genreId", detail.data.id.toString())
                                     navController = Navigation.findNavController(it)
-                                    navController!!.navigate(R.id.action_detailMovieFragment_to_reviewFragment, bundle)
+                                    navController!!.navigate(
+                                        R.id.action_detailMovieFragment_to_reviewFragment,
+                                        bundle
+                                    )
 
                                 }
                                 tvTrailer.setOnClickListener { getTrailer(detail.data.id) }
@@ -143,7 +147,9 @@ class DetailMovieFragment : Fragment() {
                     Status.LOADING -> {
                         binding.progressBar.visibility = View.VISIBLE
                     }
-                    else -> {}
+                    else -> {
+                        binding.tvEmpty.visibility = View.VISIBLE
+                    }
                 }
             }
         }
@@ -167,7 +173,9 @@ class DetailMovieFragment : Fragment() {
                     Status.LOADING -> {
                         println("Loading..")
                     }
-                    Status.EMPTY -> TODO()
+                    Status.EMPTY -> {
+                        Toast.makeText(context, "No trailer link found", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }

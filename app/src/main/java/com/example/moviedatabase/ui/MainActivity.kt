@@ -1,4 +1,4 @@
-package com.example.moviedatabase
+package com.example.moviedatabase.ui
 
 import android.graphics.Color
 import android.os.Build
@@ -11,6 +11,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.moviedatabase.R
 import com.example.moviedatabase.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
@@ -35,8 +36,8 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-//            bottomNavView?.isVisible = destination.id != R.id.splashFragment
-            bottomNavView?.isVisible = false
+            bottomNavView?.isVisible = destination.id != R.id.splashFragment
+//            bottomNavView?.isVisible = false
 
             if (destination.id == R.id.splashFragment) {
                 window.statusBarColor = Color.TRANSPARENT

@@ -1,4 +1,4 @@
-package com.example.moviedatabase.ui.adapter
+package com.example.moviedatabase.external.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -14,7 +14,7 @@ class UserLoadStateAdapter(private val retry: () -> Unit) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         loadState: LoadState
-    ): UserLoadStateAdapter.ViewHolder {
+    ): ViewHolder {
         val binding =
             UserLoadStateBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 

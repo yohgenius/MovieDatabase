@@ -2,7 +2,7 @@ package com.example.moviedatabase.ui.home
 
 import androidx.lifecycle.*
 import com.example.moviedatabase.data.Repository
-import com.example.moviedatabase.utils.Resource
+import com.example.moviedatabase.external.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject

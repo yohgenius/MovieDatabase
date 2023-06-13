@@ -1,6 +1,6 @@
 package com.example.moviedatabase.data.remote.network
 
-import com.example.moviedatabase.utils.Status
+import com.example.moviedatabase.external.utils.Status
 
 class ApiResponse<T>(val status: Status, val body: T, val message: String?) {
     companion object {

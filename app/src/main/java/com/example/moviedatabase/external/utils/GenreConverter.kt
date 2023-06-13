@@ -1,4 +1,4 @@
-package com.example.moviedatabase.utils
+package com.example.moviedatabase.external.utils
 
 class GenreConverter {
     companion object{

@@ -15,15 +15,14 @@ import com.example.moviedatabase.data.remote.response.DetailMovieResponse
 import com.example.moviedatabase.domain.RepositoryInterface
 import com.example.moviedatabase.domain.model.MovieModel
 import com.example.moviedatabase.domain.model.ReviewModel
-import com.example.moviedatabase.utils.AppExecutors
-import com.example.moviedatabase.utils.DataMapper
+import com.example.moviedatabase.external.utils.AppExecutors
+import com.example.moviedatabase.external.utils.DataMapper
 import javax.inject.Inject
 
 class Repository @Inject constructor(
     private val localDataSource: LocalDataSource,
     private val apiService: ApiService,
     private val remoteDataSource: RemoteDataSource,
-    private val reviewDataSource: ReviewDataSource,
     private val appExecutors: AppExecutors
 ) : RepositoryInterface {
     override fun getMovieList(query: String): LiveData<PagingData<MovieModel>> {

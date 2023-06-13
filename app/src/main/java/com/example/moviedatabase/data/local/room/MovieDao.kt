@@ -7,7 +7,7 @@ import com.example.moviedatabase.data.local.entity.DetailMovieEntity
 @Dao
 interface MovieDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertUserDetail(entity: List<DetailMovieEntity>)
+    fun insertMovieDetail(entity: List<DetailMovieEntity>)
 
     @Query("Select * From detail_movie_table Where id = :id")
     fun getDetailMovie(id: String): LiveData<DetailMovieEntity>
@@ -17,8 +17,5 @@ interface MovieDao {
 
     @Query("Select * From detail_movie_table Where favorite = 1")
     fun getFavoriteMovie(): LiveData<List<DetailMovieEntity>>
-
-//    @Query("Select * From detail_movie_table Where username Like '%' || :query || '%' and favorite = 1")
-//    fun searchMovie(query: String): LiveData<List<DetailMovieEntity>>
 
 }
