@@ -28,7 +28,7 @@ TMDB project
 <img width="322" alt="Search Screen" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/ec2fc68d-f84b-4885-a2cc-937decf36130">
     </td>
     <td>
-<img width="322" alt="Search Screen 2" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/07b223e7-0779-41d3-8cd9-2b5583cade7a">
+<img width="322" alt="Search Screen 2" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/9f0491d8-46d7-43a0-9bd3-ef297e83fb21">
     </td>
   </tr>
   <tr>
