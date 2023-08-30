@@ -35,5 +35,14 @@ TMDB project
     <td>
 <img width="322" alt="Home Screen connection failure" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/eba6fee4-f978-42d6-b45c-abb9f1e8d1bd">
     </td>
+    <td>
+<img width="322" alt="https://github.com/yohgenius/MovieDatabase/assets/20897249/a2708419-2eee-4584-9a9c-d127e4fd9a84">
+    </td>
+    <td>
+<img width="322" alt="https://github.com/yohgenius/MovieDatabase/assets/20897249/4d0bf948-6a7e-4288-bc13-a73a58129c5a">
+    </td>
+    <td>
+<img width="322" alt="Home Screen connection failure" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/b66d9413-74ed-4598-9858-4a49c6703914">
+    </td>
   </tr>
 </table>
