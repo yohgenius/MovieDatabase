@@ -21,28 +21,18 @@ TMDB project
 <table>
   <tr>
     <td>
-
 <img width="322" alt="Home Screen" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/87f48a41-0a11-4248-b647-ef09d3039d20">
     </td>
     <td>
-<img width="322" alt="Search Screen" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/ec2fc68d-f84b-4885-a2cc-937decf36130">
-    </td>
-    <td>
-<img width="322" alt="Search Screen 2" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/9f0491d8-46d7-43a0-9bd3-ef297e83fb21">
+<img width="322" alt="Movie List" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/b66d9413-74ed-4598-9858-4a49c6703914">
     </td>
   </tr>
   <tr>
     <td>
-<img width="322" alt="Home Screen connection failure" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/eba6fee4-f978-42d6-b45c-abb9f1e8d1bd">
+<img width="322" alt="Favorite Screen" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/ec2fc68d-f84b-4885-a2cc-937decf36130">
     </td>
     <td>
-<img width="322" alt="Home Screen connection failure" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/a2708419-2eee-4584-9a9c-d127e4fd9a84">
-    </td>
-    <td>
-<img width="322" alt="Home Screen connection failure" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/4d0bf948-6a7e-4288-bc13-a73a58129c5a">
-    </td>
-    <td>
-<img width="322" alt="Home Screen connection failure" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/b66d9413-74ed-4598-9858-4a49c6703914">
+<img width="322" alt="Detail Screen" src="https://github.com/yohgenius/MovieDatabase/assets/20897249/9f0491d8-46d7-43a0-9bd3-ef297e83fb21">
     </td>
   </tr>
 </table>
