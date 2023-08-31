@@ -3,20 +3,21 @@ TMDB project
 
 ### **Features**
 
-- See song list as grid list on homepage, can be played by clicking play icon
-- Search song and view it as list on search page, can be played by clicking play icon
-- Play/pause on the play screen
-- Play song while phone is on lockscreen
-- Player show up on status bar
-- Connection error handling on home and search page
+- See genre list as grid list on homepage, to narrow down the list
+- See available movie list according to genre
+- See movie detail
+- See movie review
+- Watch movie trailer (opening external app)
+- Favorite screen
 
 ### **Libraries**
 
-- http
-- get
-- just_audio
-- just_audio_background
-- itunes api
+- dagger-hilt
+- coroutines
+- retrofit
+- room
+- livedata
+- tmdb api
 
 <table>
   <tr>
